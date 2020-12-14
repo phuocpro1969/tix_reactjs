@@ -1,0 +1,205 @@
+*{
+    font-family: "Open Sans", sans-serif;
+    box-sizing: border-box !important;
+   
+}
+ul{
+    list-style: none !important;
+}
+p{
+    margin-bottom: 0px !important;
+}
+.container {
+    max-width: 100%;
+    padding-right: 0px;
+    padding-left: 0px;
+ }
+ @media screen and (max-width: 1024px) {
+    .w-8--fixed{
+        max-width: 100% !important;
+    }
+    .w-4--fixed{
+        max-width: 100% !important;
+    }
+    .ck__info__notification{
+        display: none;
+    }
+    .btn__bookTickets{
+        font-size: 30px !important;
+        font-weight: bold !important;
+        width: 500px !important;
+        padding: 30px 0px !important;
+    }
+    .checkOut{
+        height: 500px;
+        position: relative !important;
+    }
+    .autoCenter{
+        width: 100%;
+    }
+    .chooseSeat{
+        &__content{
+            margin: 10px 5px 20px 16px !important;
+            .cs__content__bottom{
+                margin-top: 10px !important;
+                .listSeat{
+                    overflow: hidden;
+                    .rowSeat{
+                        display: flex;
+                        margin-bottom: 30px !important;
+                        .seat__group{
+                            .seat__wrapper{
+                                margin-right: 15px !important;
+                                display: inline-block;
+                                .seat__item{
+                                    width: 30px !important;
+                                    height: 30px !important;
+                                }
+                            }
+                            &:first-child{
+                                .seat__wrapper:first-child{
+                                    margin-right: 50px !important;
+                                }
+                                margin-right:30px !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .ck__info__bottom{
+        position: absolute;
+        right: 0;
+    }
+ }
+
+ @media screen and (max-width: 768px) {
+    .autoCenter{    
+        width: 100%;
+    }
+    .chooseSeat{
+        &__content{
+            margin: 30px 5px 20px 16px !important;
+            .cs__content__bottom{
+                margin-top: 40px !important;
+                .listSeat{
+                    overflow: hidden;
+                    .rowSeat{
+                        display: flex;
+                        margin-bottom: 20px !important;
+                        .seat__group{
+                            .seat__wrapper{
+                                margin-right: 16px !important;
+                                display: inline-block;
+                                .seat__item{
+                                    width: 27px !important;
+                                    height: 27px !important;
+                                }
+                            }
+                            &:first-child{
+                                .seat__wrapper:first-child{
+                                    margin-right: 10px !important;
+                                }
+                                margin-right:15px !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+ }
+
+ @media screen and (max-width: 500px) {
+    .autoCenter{
+        width: 100% !important;
+    }
+     .wrapper__bookingpage{
+         .chooseSeat{
+            &__header{
+                &__process{
+                    color: red;
+                    li:last-child{
+                        display: none;
+                    }
+                }
+             }
+             &__content{
+                margin: 30px 5px 10px 16px !important;
+                .cs__content__bottom{
+                    margin-top: 50px !important;
+                    .listSeat{
+                        overflow-x: auto;
+                        .rowSeat{
+                            width: 135%;
+                            .seat__group{
+                                .seat__wrapper{
+                                    margin-right: 12px !important;
+                                    display: inline-block;
+                                    .seat__item{
+                                        width: 23px !important;
+                                        height: 23px !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+         }
+        .checkOut{
+            display: none !important;
+        }
+     }
+     .Active__btn__bookingResponsive{
+        background: linear-gradient(163deg, rgba(79,180,58,1) 0%, rgba(158,253,29,1) 81%);
+        display: block !important;
+        color: white;
+        padding: 20px 0px;
+        position: absolute;
+        right: 0px;
+        font-weight: bold;
+     }
+     .time__selected__seat{
+         font-size: 25px !important;
+     }
+ }
+ @media screen and (max-width: 500px) {
+    .wrapper__bookingpage{
+        .chooseSeat{
+           &__header{
+            flex-flow: column-reverse !important;
+               flex-direction: column;
+               &__process{
+                   color: red;
+                   li:last-child{
+                       display: none;
+                   }
+               }
+               &__infoUser{
+                   margin-top: 10px;
+               }
+            }
+            &__content{
+               margin: 20px 5px 0px 16px !important;
+               .cs__content__bottom{
+                   margin-top: 30px !important;
+                   .listSeat{
+                       overflow-x: auto;
+                       .rowSeat{
+                           width: 169%;
+                       }
+                   }
+                   .title__seat__common{
+                       width: 25%;
+                       span.sp__seat{
+                           width: 20px;
+                           height: 20px;
+                       }
+                   }
+               }
+           }
+        }
+    }
+ }

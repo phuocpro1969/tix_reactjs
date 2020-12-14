@@ -1,0 +1,138 @@
+.w-8--fixed{
+    max-width: 71% !important;
+    flex: auto;
+}
+.chooseSeat{
+    &__header{
+        font-weight: bold;
+        align-items: center;
+        justify-content: space-between;
+        display: flex;
+        box-shadow: -6px -1px 15px rgba(0, 0, 0, 0.3);
+        &__process{
+            margin-bottom: 0px;
+            li{
+                line-height: 80px;
+                display: inline-block;
+                margin: 0px 30px;
+                font-size: 14px;
+            }
+        }
+        &__infoUser{
+            margin-right: 20px;
+        }
+    }
+    .Active__btn__bookingResponsive{
+        display: none;
+     }
+    &__content{
+        margin: 20px 40px;
+        .cs__content__top{
+            line-height: 33px;
+            .wp_thunkFilm{
+                margin-top: 10px;
+            }
+            display: flex;
+            justify-content: space-between;
+            .cs__content__topLeft{
+                display: flex;
+                .cs__topLeft__infoFilm{
+                    font-size: 14px;
+                    color: #9b9b9b;
+
+                }
+            }
+            .cs__content__topRight{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                color: #787878; 
+                font-size: 11px;
+                p.time__selected__seat{
+                    color: rgba(212,126,29,1);
+                    font-size: 35px;
+                    font-weight: 600;
+                }
+            }
+        }
+        .cs__content__bottom{
+            margin-top: 20px;
+            .screen{
+                width: 100%;
+                img{
+                    width: 100%;
+                }
+            }
+            .title__seat{
+                margin-top: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                &__common{
+                    align-items: center;
+                    display: flex;
+                    flex-direction: column;
+                    span.sp__seat{
+                        display: inline-block;
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 4px;
+                        margin-right: 5px;
+                        margin-bottom: 7px;
+                   
+                    }
+                    span.sp__seat__text{
+                      
+                        color: #9b9b9b;
+                    }
+                    span.sp__seat__normal{
+                        box-shadow: 2px 3px #b3b3b3;
+                        background: linear-gradient(96deg, rgba(65,66,65,1) 0%, rgba(30,31,27,1) 52%);
+                    }
+                    span.sp__seat__vip{
+                        box-shadow: 2px 3px #b3b3b3;
+                        background: linear-gradient(96deg, rgba(223,91,25,1) 0%, rgba(212,126,29,1) 52%);
+                    }
+                    span.sp__seat__disable{
+                        box-shadow: 2px 3px #b3b3b3;
+                        background: darkgrey;
+                    }
+                    span.sp__seat__selected{
+                        box-shadow: 2px 3px #b3b3b3;
+                        background: linear-gradient(95deg, rgba(115,230,17,1) 0%, rgba(17,158,0,1) 59%) !important;
+
+                    }
+                    span.sp__seat__text{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+.autoCenter{
+    width: 100%;
+    margin: 10px auto;
+}
+p.animationTextCinema{
+    position: relative;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    overflow: hidden;
+    background: linear-gradient(90deg, rgb(100, 173, 3), #fff, rgb(235, 91, 8));
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: animate 8s linear infinite;  
+    background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+@keyframes animate {
+    0% {
+      background-position: -500%;
+    }
+    100% {
+      background-position: 500%;
+    }
+  }

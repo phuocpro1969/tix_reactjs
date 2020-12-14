@@ -1,0 +1,86 @@
+.wrapper__ContentListFilmTix{
+    width: 940px;
+    margin: 0px auto;
+}
+.wp__filmListNav{
+    ul.nav__tabListFilm{
+        font-weight: 500 !important;
+        margin-bottom: 30px !important;
+        align-items: center;
+        display: flex;
+        border-bottom:none;
+        width: 350px ;
+        margin: 0px auto ;
+        li{
+            a{
+                border: none;
+                transition: 0.5s all;
+                font-size: 25px;
+                transform: scale(0.7);
+                font-weight: 600;
+                cursor: pointer;
+                color: #000;
+                &:hover{
+                    border-color: #ffffff !important;
+                }
+            }
+            a.nav-link.active{
+                font-weight: 700;
+                transition: 0.5s all ease-in-out;
+                transform: scale(1);
+                color: #fa5238;
+            }
+    
+        }
+    }
+    .container-fluid--fixed{
+        padding-left:0px;
+        padding-right: 0px;
+    }
+}
+@media screen and (max-width: 768px) {
+   .list__filmShowing{
+    width: 650px !important;
+    margin: 10px 49px;
+  }
+  ul.nav__tabListFilm{
+    margin: 20px 240px 0px 240px !important;
+  }
+
+}
+@media screen and (max-width: 576px) {
+    .tab-content .list__filmShowing{
+        width: 400px !important;
+        text-align: left;
+        margin: 0px 60px !important;
+        .col-sm-6--fixed {
+            max-width: 150px !important;
+        }
+      }
+      .wp__filmListNav ul.nav__tabListFilm{
+        width: 220px !important;
+         margin: 15px 115px!important;
+         li{
+             a{
+                 padding: 8px;
+                 font-size: 14px !important;
+                 &:hover{
+                     font-size: 16px !important;
+                 }
+             }
+         }
+     }
+ }
+
+@media screen and (max-width: 400px) {
+    .tab-content .list__filmShowing{
+        width: 360px !important;
+        margin: 0px 62px !important;
+        .col-sm-6--fixed {
+            max-width: 130px !important;
+        }
+    }
+    .wp__filmListNav ul.nav__tabListFilm{
+        margin: 15px 104px !important;
+     }
+}

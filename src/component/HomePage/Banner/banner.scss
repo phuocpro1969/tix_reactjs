@@ -1,0 +1,47 @@
+.slide__banner{
+    max-height: 630px;
+    overflow: hidden;
+    .active{
+        display: block;
+        background-clip: padding-box !important;
+        background-color:#fb4226 !important;
+    }
+}
+.slide__banner  ol{
+    bottom: 60px;
+}
+.slide__banner  ol li.indicator__itemBanner{
+    width: 11px !important;
+    height: 11px !important;
+    border-radius: 50%;
+    background-color: #ffffff;
+    opacity: 1 ;
+    margin-left: 5px;
+}
+@media screen and (max-width: 768px) {
+    .slide__banner ol
+    {
+        bottom: 15px !important;
+    }
+    .slide__banner{
+        max-height: 315px;
+    }
+  }
+
+@media screen and (max-width: 576px) {
+    .wrapper .carousel__tix .slide__banner{
+        max-height: 170px;
+    }
+
+  }
+
+
+  @media screen and (max-width: 400px) {
+    .wrapper .carousel__tix .slide__banner{
+        max-height: 156px;
+        ol
+        {
+            bottom: 0px !important;
+        }
+    }
+  }

@@ -1,0 +1,25 @@
+.wp__titleFilmDropdown{
+    width: 30%;
+}
+.dr-menu--listfilm{
+    color: rgb(7, 6, 6);
+    font-weight: 500 !important;
+    font-size: 15px;
+    line-height: 32px;
+    width: 300px !important;
+    overflow-x: hidden !important;
+    max-height: 300px !important;
+    overflow-y: scroll !important;
+    &::-webkit-scrollbar {
+        width: 4px;
+        background-color: #F5F5F5;
+    } 
+    &::-webkit-scrollbar-thumb {
+        background-color: #b1aeae;
+    }
+    &::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        background-color: #F5F5F5;
+    }
+
+}

@@ -1,0 +1,105 @@
+.selectMenu{
+    padding: 0px 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+    border-radius: 5px;
+    max-width: 940px;
+    height: 85px;
+    align-items: center;
+    display: flex;
+    margin: 0px auto;
+    background: #ffffff;
+    position: relative;
+    top: -40px;
+    .dropdown-toggle--fixed{
+        // height: 300px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        span{
+            font-size: 14px;
+        }
+        i{
+            color: #cacaca;
+        }
+
+    }
+    .dropdown-toggle--fixed.focus, .dropdown-toggle--fixed:focus {
+        box-shadow:none !important;
+    }
+    .dropdown-toggle::after {
+        display: none;
+    }
+    .title__movieDropdown{
+        display: block !important; 
+        overflow: hidden; 
+        white-space: nowrap; 
+        text-overflow: ellipsis;
+        width: 800px;
+        text-align: left;
+        margin-right: 40px;
+    }
+    .btn_bookingTicketNow{
+        font-size: 14px;
+        border-radius: 4px;
+        padding: 10px 20px;
+        text-transform: uppercase;
+        color: azure;
+        outline: none;
+        border: none;
+        background-color: #dbdbdb;
+    }
+    .btnBookingActive{
+        font-weight: bold;
+        background: linear-gradient(167deg, #f13709 10%, #9d4a06 81%) !important;
+        .activeTextBookingNow{
+            display: block;
+            animation-name: animeActive;
+            animation-duration: 0.5s;
+            // animation-delay: 2s;
+            animation-iteration-count: infinite;
+        }
+    }
+    .wp__movieTheaterDropdown, .wp__timeSeeing, .wp__CinemaInterest{
+        width: 18%;
+    }
+
+}
+ .dropdown--fixed{
+    padding: 0px 10px;
+    border-right: 1px solid #f2f2f2;
+    .animate {
+        animation-duration: 0.3s;
+        -webkit-animation-duration: 0.3s;
+        animation-fill-mode: both;
+        -webkit-animation-fill-mode: both;
+      }
+    @keyframes slideIn {
+        0% {
+          transform: translateY(16px);
+          opacity: 0;
+        }
+        100% {
+          transform:translateY(-3px);
+          opacity: 1;
+        }
+      }
+      .slideIn {
+        animation-name: slideIn;
+      }
+}
+@media screen and (max-width: 768px) {
+    .selectMenu{
+        display: none;
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    .tab__menu{
+        width: 100% !important;
+    }
+  }
+  @keyframes animeActive{
+      from {transform: rotate3d(0);}
+      to {transform: rotate3d(1, 1, 1, 10deg);}
+  }

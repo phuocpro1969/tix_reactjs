@@ -1,0 +1,16 @@
+.tab__content__middle{
+    &::-webkit-scrollbar {
+        width: 4px;
+        background-color: #F5F5F5;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: #dddcdc;
+        border-radius: 3px;
+    }
+    overflow-y: auto;
+    width: 31%;
+    height: 630px;
+    // margin-top: 150px;
+    border-top: 1px solid #ebebec;
+    border-bottom: 1px solid #ebebec;
+}

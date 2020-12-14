@@ -1,0 +1,73 @@
+.item__filmShow{
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #f2f2f2;
+    .wp__filmShow__info__item{
+        .wp__filmShow__info__top{
+            display: flex;
+            margin-bottom: 15px;
+            a.wp__thumb__filmShow{
+                width: 50px;
+                overflow: hidden;
+                display: block;
+                margin-right: 10px;
+            }
+            .wp__text__filmShow{
+                p{
+                    cursor: pointer;
+                    &:last-child{
+                        line-height: 1.7;
+                        font-size: 12px;
+                        color: #9b9b9b;
+                    }
+                    span.code__filmShow{
+                        background-color:#fb4226;
+                        color: #ffffff;
+                        border-radius: 4px;
+                        padding: 0 5px;
+                        font-size: 12px;
+                        text-align: center;
+                        margin-right: 4px;
+                    }
+                font-size: 14px;
+                display: block;
+                line-height: 22px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                color: #000;
+                font-weight: 500;
+                }
+            }
+      
+        }
+        .wp__filmShow__info__bottom{
+            h4{
+                font-size: 17px;
+            }
+            .list__session__filmShow{
+                .session__filmShow__item{
+                    text-align: center;
+                    font-size: 14px;
+                    border-radius: 7px;
+                    margin: 0 10px 10px 0;
+                    display: inline-block;
+                    width: 120px;
+                    padding: 5px 0px;
+                    background: rgba(246, 246, 246, 0.5);
+                    color: #9b9b9b;
+                    font-weight: 500;
+                    border: 1px solid #e4e4e4;
+                    span{
+                        font-size: 18px;
+                        font-weight: 600;
+                        color: #108f3e;
+                        cursor: pointer;
+                        &:hover{
+                            color: #fb4226;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

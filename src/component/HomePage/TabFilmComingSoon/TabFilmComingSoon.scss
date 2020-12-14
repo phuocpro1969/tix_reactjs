@@ -1,0 +1,22 @@
+.owl-theme .owl-nav .owl-prev,.owl-theme .owl-nav .owl-next{
+    background-size: contain;
+    background-repeat: no-repeat;
+    color:transparent !important;
+    position: absolute;
+    font-size: 50px;
+    &:hover{
+        color:transparent !important;
+        background-color: transparent !important;
+    }
+}
+.owl-theme .owl-nav .owl-prev{
+    left:-100px;
+    top: 354px;
+    background-image: url("../../back-session.png") !important;
+
+}
+.owl-theme .owl-nav .owl-next{
+    right: -100px;
+    top: 354px;
+    background-image: url("../../next-session.png") !important;
+}

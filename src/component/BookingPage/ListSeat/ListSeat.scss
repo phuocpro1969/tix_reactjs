@@ -1,0 +1,46 @@
+.listSeat{
+    .rowSeat{
+        display: flex;
+        margin-bottom: 20px;
+            .seat__wrapper{
+                margin-right: 18px;
+                display: inline-block;
+                &:first-child{
+                    .seat__item{
+                        background: none !important;
+                        box-shadow: none;
+                        text-align: initial !important;
+                        color: black;
+                        width: 15px;
+                    }
+                }
+                .seat__item{
+                    font-size: 14px;
+                    color: white;
+                    text-align: center;
+                    line-height: 40px;
+                    letter-spacing: 1px;
+                    box-shadow: 3px 4px #929292c2;
+                    cursor: pointer;
+                    border-radius: 4px;
+                    display: inline-block;
+                    width: 40px;
+                    height: 40px;
+                    background: linear-gradient(96deg, rgba(65,66,65,1) 0%, rgba(30,31,27,1) 52%);
+                }
+                .seat__item__vip{
+                    background: linear-gradient(96deg, rgba(223,91,25,1) 0%, rgba(212,126,29,1) 52%);
+                }
+                .seat__item__disable{
+                    cursor: inherit;
+                    background: darkgrey;
+                }
+                .sp__seat__selected{
+                    background: linear-gradient(95deg, rgba(115,230,17,1) 0%, rgba(17,158,0,1) 59%) !important;
+                }
+
+            }
+
+
+    }
+}

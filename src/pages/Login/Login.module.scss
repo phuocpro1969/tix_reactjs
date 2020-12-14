@@ -1,0 +1,103 @@
+$primary: #11998e;
+$secondary: #38ef7d;
+$white: #fff;
+$gray: #9b9b9b;
+.form{
+  width: 350px;
+  background-color:#080808d8;
+  padding: 20px 70px 40px 70px;
+  max-height: 470px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  .link__Reg{
+    font-size: 16px !important;
+      margin: 10px auto !important;
+      display: block !important;
+      letter-spacing: 1px !important;
+      word-spacing: 1px !important;
+      color: #bfbfbf !important;
+      &:hover{
+        color: rgb(255, 255, 255) !important;
+        text-decoration: underline !important;
+      }
+  }
+
+}
+.form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 50%;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 14px;
+  color: #fff;
+  padding: 0px;
+  background: transparent;
+  transition: border-color 0.2s;
+
+  &::placeholder {
+    color: transparent;
+  }
+
+  &:placeholder-shown ~ .form__label {
+    font-size: 17px;
+    cursor: text;
+    top: 8px;
+  }
+}
+
+.form__label {
+  position: absolute;
+  top: -9px;
+  display: block;
+  transition: 0.2s;
+  font-size: 14px;
+  color: $gray;
+}
+
+.form__field:focus {
+  ~ .form__label {
+    position: absolute;
+    top: -14px;
+    display: block;
+    transition: 0.2s;
+    font-size: 14px;
+    color: $primary;
+    font-weight:700;    
+  }
+  top: 0px;
+  padding-bottom: 0px;  
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, $primary,$secondary);
+  border-image-slice: 1;
+}
+/* reset input */
+.form__field{
+  &:required,&:invalid { box-shadow:none; }
+}
+/* demo */
+.wrapper__login{
+  font-family: 'Poppins', sans-serif; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 1.5rem;
+  background-image: url(../../assets/bg2.jpg);
+  background-size: 100%;
+}
+.errorMes{
+  font-size: 14px;
+  color: #ae1c1c;
+}

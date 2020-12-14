@@ -1,0 +1,204 @@
+.checkOut{
+    height: 100%;
+    z-index: 100;
+    right: 0;
+    position: fixed;
+    box-shadow: 0 0 13px rgba(0,0,0,.3);
+    &__info{
+        padding: 0px 50px;
+        .ck__info__totalPrice{
+            padding: 10px 0px;
+            font-size: 40px;
+            color: #54a504;
+            font-weight: 600;
+            border-bottom: 1px dashed #d6d6d69c;
+        }
+        .ck__info__film{
+            padding:15px 0px;  
+            border-bottom: 1px dashed #d6d6d69c; 
+            h4{
+                font-weight: bold;
+                font-size: 17px;
+                span{
+                    display: inline-block;
+                    background: #5fb328;
+                    color: white;
+                    font-size: 13.5px;
+                    padding: 5px 10px;
+                    border-radius: 7px;
+                    margin-right: 10px;
+                }
+            }
+            p{
+                font-weight: 600;
+                font-size: 14px;
+                color: #040403;
+            }
+        }
+        .ck__info__seat{
+            margin-left: 0px;
+            margin-right: 0px;
+            padding: 15px 0px;
+            border-bottom: 1px dashed #d6d6d69c; 
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            .info__seat__choose{
+                font-weight: 700;
+                font-size: 14px;
+                color:rgba(212,126,29,1);
+                letter-spacing: 1.6px;
+            }
+            .info__seat__price{
+                color: #54a504;
+                font-weight: 700;
+                font-size: 17px;
+            }
+        }
+        .ck__info__email{  
+            padding: 40px 0px;
+            border-bottom: 1px dashed #d6d6d69c;
+            .ck__info__wrapperEmail{
+                position: relative;
+                label.label__email{
+                    color: #9b9b9b;
+                    font-size: 14px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    transition: 0.3s ease-in-out;
+                }
+                .barInputEmail{
+                    position: absolute;
+                    width: 100%;
+                    height: 1px;
+                    bottom: 0;
+                    left: 0;
+                    // background: lightskyblue;
+                    &:before{
+                        content: "";
+                        position: absolute;
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        background: #72d311;
+                        transform: scaleX(0);
+                        transition:transform 0.3s ease-in-out;
+                    }
+                }
+                .txtEmail{  
+                    border:none;
+                    outline: none;
+                    display: inline-block;
+                    width: 100%;
+                    border-bottom: 1px solid #e8e8e8;
+                    color:#393939;
+                    &:focus ~label.label__email,&:valid ~label.label__email {
+                        top: -20px;
+                        transition: 0.3s ease-in-out;
+                        color: #72d311;
+                    }
+                    &:focus ~ .barInputEmail:before,&:valid ~ .barInputEmail:before{
+                        transform: scaleX(1);
+                        transition:transform 0.3s ease-in-out;
+                    }
+                }
+
+            }
+
+        }
+        .ck__info__phone{  
+            padding: 30px 0px;
+            border-bottom: 1px dashed #d6d6d69c;
+            .ck__info__wrapperPhone{
+                position: relative;
+                label.label__phone{
+                    color: #9b9b9b;
+                    font-size: 14px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    transition: 0.3s ease-in-out;
+                }
+                .barInputPhone{
+                    position: absolute;
+                    width: 100%;
+                    height: 1px;
+                    bottom: 0;
+                    left: 0;
+                    // background: lightskyblue;
+                    &:before{
+                        content: "";
+                        position: absolute;
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        background: #72d311;
+                        transform: scaleX(0);
+                        transition:transform 0.3s ease-in-out;
+                    }
+                }
+                .txtPhone{  
+                    border:none;
+                    outline: none;
+                    display: inline-block;
+                    width: 100%;
+                    border-bottom: 1px solid #e8e8e8;
+                    color:#393939;
+                    &:focus ~label.label__phone,&:valid ~label.label__phone {
+                        top: -20px;
+                        transition: 0.3s ease-in-out;
+                        color: #72d311;
+                    }
+                    &:focus ~ .barInputPhone:before,&:valid ~ .barInputPhone:before{
+                        transform: scaleX(1);
+                        transition:transform 0.3s ease-in-out;
+                    }
+                }
+
+            }
+
+        }
+    }
+    .ck__info__bottom{
+        background-color: white;
+        z-index: 101;
+        bottom: 0;
+        position: fixed;
+        .btn__bookTickets{
+            font-weight: bold;
+            font-size: 20px;
+            width: 100%;
+            padding: 25px 0px;
+            background: linear-gradient(95deg, #73e611 0%, #119e00 59%);
+        
+        }
+        .ck__info__notification{
+            p{
+                font-weight: 600;
+                font-size: 14px;
+                text-align: center;
+                span{
+                    color: #f79320;
+                }
+                img{
+                    width: 20px;
+                }
+            }
+            width: 100%;
+            padding: 25px 60px;
+            bottom: 60px;
+            z-index: 101;
+            text-align: center;
+            font-size: 15px;
+        }
+    }
+}
+.autoCenter{
+    width: 100%;
+    margin: 10px auto;
+}
+    .w-4--fixed{
+        max-width: 29% !important;
+    }
