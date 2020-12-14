@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:bc935140fd84c64e64f866c6990bdf1ae69458b7daaf659e2fdd544301eeb6f4
-size 274
+function showDateOnMenu(data) {
+  return {
+    type: "SHOW_DATE_ON_MENU",
+    payload: data,
+  };
+}
+export { showDateOnMenu };
+function resetTimeByDate(status) {
+  return {
+    type: "RESET_TIME_BY_DATE",
+    status: status,
+  };
+}
+export { resetTimeByDate };

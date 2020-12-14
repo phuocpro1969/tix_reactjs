@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f1a98a19d0815216130e2a6740077ca28da00a59d70bf6790e91593c77685c49
-size 416
+function getTimeShowTime(dataDate) {
+  return {
+    type: "GET_TIME_SHOW_TIME",
+    payload: dataDate,
+  };
+}
+function showTimeOnMenu(data) {
+  return {
+    type: "SHOW_TIME_ON_MENU",
+    payload: data,
+  };
+}
+function getCodeShowTime(data) {
+  return {
+    type: "GET_CODE_SHOW_TIME",
+    payload: data,
+  };
+}
+export { getCodeShowTime };
+export { showTimeOnMenu };
+export { getTimeShowTime };

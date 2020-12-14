@@ -1,3 +1,60 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:28e5edf6be9156ee4ff66e636b931dc022dbf7fb560fc302c2302436b1914a8d
-size 1357
+import axios from "axios";
+function getListFilmRequest() {
+  return (dispatch) => {
+    axios({
+      method: "GET",
+      url:
+        "https://movie0706.cybersoft.edu.vn/api/QuanLyPhim/LayDanhSachPhim?maNhom=GP11",
+      data: null,
+    })
+      .then(function (ress) {
+        dispatch(getListFilmSuccess(ress.data));
+        // console.log(ress.data);
+      })
+      .catch(function (err) {
+        dispatch(getListFilmFailed(err));
+        // console.log(err);
+      });
+  };
+}
+export { getListFilmRequest };
+function getListFilmSuccess(data) {
+  return {
+    type: "GET_LIST_FILM_SUCCESS",
+    payload: data,
+  };
+}
+function getListFilmFailed(err) {
+  return {
+    type: "GET_LIST_FILM_FAILED",
+    payload: err,
+  };
+}
+function resetDateByListFilm(status) {
+  return {
+    type: "RESET_DATE_BY_LIST_FILM",
+    status: status,
+  };
+}
+export { resetDateByListFilm };
+function resetTimeByFilm(status) {
+  return {
+    type: "RESET_TIME_BY_FILM",
+    status: status,
+  };
+}
+export { resetTimeByFilm };
+function showNameFilmOnMenu(data) {
+  return {
+    type: "SHOW_NAME_FILM_ON_MENU",
+    payload: data,
+  };
+}
+export { showNameFilmOnMenu };
+function resetCinemaSystemByFilm(status) {
+  return {
+    type: "RESET_THEATER_BY_FILM",
+    status: status,
+  };
+}
+export { resetCinemaSystemByFilm };

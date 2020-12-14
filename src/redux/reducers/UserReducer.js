@@ -1,3 +1,23 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:dc3799a64278f0dcd7a7f32d54a94d8a05c14767431c00b74b23c0e52d585caf
-size 615
+const initialState = {
+  infoUser: null,
+  messError: null,
+};
+const UserReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case "SAVE_USER_LOGIN_SUCCESS": {
+      return { ...state, infoUser: action.payload };
+    }
+    case "SAVE_USER_LOGOUT": {
+      return { ...state, infoUser: action.payload };
+    }
+    case "SHOW_ERROR_MESS_BY_REG": {
+      return { ...state, messError: action.payload };
+    }
+    case "RESET_ERR_MESS": {
+      return { ...state, messError: action.payload };
+    }
+    default:
+      return { ...state };
+  }
+};
+export default UserReducer;

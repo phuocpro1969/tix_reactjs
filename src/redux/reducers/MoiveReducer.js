@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6315d4bca7957e77169f217661d44b6ff95febb8f52ada93fc869b9a13993612
-size 336
+const initialState = {
+  listMovie: [],
+};
+const Movie = (state = initialState, action) => {
+  switch (action.type) {
+    case "GET_LIST_MOVIE_SUCCESS": {
+      // console.log(action.payload);
+      return { ...state, listMovie: action.payload };
+    }
+    default:
+      return { ...state };
+  }
+};
+export default Movie;

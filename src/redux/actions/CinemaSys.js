@@ -1,3 +1,62 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:24702103ad796f61f547b90e9d4b9e96e1ff7a0eb57faa610dff5dd5347477b6
-size 1623
+import axios from "axios";
+function getListCinemaSysRequest() {
+  return (dispatch) => {
+    axios({
+      method: "GET",
+      url:
+        "https://movie0706.cybersoft.edu.vn/api/QuanLyRap/LayThongTinHeThongRap",
+      data: null,
+    })
+      .then(function (ress) {
+        dispatch(getListCinemaSysSuccess(ress.data));
+        // console.log(ress.data);
+      })
+      .catch(function (err) {
+        dispatch(getListCinemaSysFailed(err));
+        console.log(err);
+      });
+  };
+}
+function getListCinemaSysSuccess(data) {
+  return {
+    type: "GET_CINEMASYS_SUCCESS",
+    payload: data,
+  };
+}
+function getListCinemaSysFailed(err) {
+  return {
+    type: "GET_CINEMASYS_FAILED",
+    payload: err,
+  };
+}
+export { getListCinemaSysRequest };
+function GetInfoShowTimeOfEachSys(id) {
+  return (dispatch) => {
+    axios({
+      method: "GET",
+      url: `https://movie0706.cybersoft.edu.vn/api/QuanLyRap/LayThongTinLichChieuHeThongRap?maHeThongRap=${id}&maNhom=GP11`,
+      data: null,
+    })
+      .then(function (ress) {
+        // console.log(ress.data);
+        dispatch(GetInfoShowTimeOfEachSysSuccess(ress.data));
+      })
+      .catch(function (err) {
+        dispatch(GetInfoShowTimeOfEachSysFailed(err));
+        console.log(err);
+      });
+  };
+}
+function GetInfoShowTimeOfEachSysSuccess(data) {
+  return {
+    type: "GET_INFO_SHOW_TIME_EACH_SYS_SUCCESS",
+    payload: data,
+  };
+}
+function GetInfoShowTimeOfEachSysFailed(err) {
+  return {
+    type: "GET_INFO_SHOW_TIME_EACH_SYS_FAILED",
+    payload: err,
+  };
+}
+export { GetInfoShowTimeOfEachSys };
