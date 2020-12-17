@@ -14,7 +14,7 @@ function SelectMenuTime(props) {
   });
   // console.log(filmItem);
   // console.log(statusDate);
-  console.log(listTime);
+  // console.log(listTime);
   function showListTime() {
     return listTime?.map((item, index) => {
       return <SelectMenuTimeItem item={item} key={index} />;

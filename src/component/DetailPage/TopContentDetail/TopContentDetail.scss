@@ -1,0 +1,150 @@
+.top_content {
+    position: relative;
+    background-image: linear-gradient(45deg, black, transparent);
+    &__responsiveDetail {
+      height:530px;
+      overflow: hidden;
+      position: relative;
+      img {
+        display: block;
+        filter: blur(15px);
+      }
+      iframe#iframe-trailer {
+        position: absolute;
+        z-index: 4;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.9s, visibility 0.9s;
+        transition: 0.5s all;
+      }
+      a.play_responsive {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: none;
+        z-index: 2;
+        cursor: pointer;
+      }
+    }
+    &__overlay {
+      background: linear-gradient(to top, rgb(10, 32, 41), transparent 100%);
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0px;
+    }
+    &__detail {
+      top: 50%;
+      left: 52%;
+      transform: translate(-50%, -50%);
+      width: 900px;
+      position: absolute;
+      .wp_thumb {
+        border-radius: 4px;
+        padding: 10%;
+        padding-top: 27%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        button.play_trailer {
+          display: none;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          outline: none;
+          border: none;
+          background: none;
+        }
+        &:hover button.play_trailer{
+          display: block;
+        }
+      }
+      .detail_info {
+        color: #e9e9e9;
+        font-size: 14px;
+        padding: 2px 11px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .title_detail {
+          &__Codespan {
+            font-size: 16px !important;
+            display: inline-block;
+            background: #fb4226;
+            padding: 0px 5px;
+            border-radius: 3px;
+            margin-right: 10px !important;
+          }
+          span {
+            display: inline-block;
+            font-size: 24px;
+          }
+          &__Contentspan {
+            font-weight: 550;
+          }
+        }
+        .btn__bookingTicketDetail{
+          margin-top: 23px !important;
+          width: 100px;
+        }
+      }
+      .rating-detail {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        padding-left: 159px;
+        .percent {
+          position: relative;
+          width: 140px;
+          height: 132px;
+          svg {
+            position: relative;
+            circle {
+              width: 140px;
+              height: 125px;
+              stroke: #000;
+              stroke-width: 8px;
+              fill: none;
+              transform: translate(5px, 5px);
+              stroke-dasharray: 358;
+              stroke-dashoffset: 358;
+              &:nth-child(1) {
+                fill: rgba(0, 0, 0, 0.4);
+                stroke-dashoffset: 0;
+                stroke: #3a3a3a;
+              }
+              &:nth-child(2) {
+                stroke-dashoffset: calc(358 - (358 * 87) / 100) !important;
+                stroke: #7ed321 !important;
+              }
+            }
+          }
+          .number {
+            color: #fff;
+            display: flex;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: -6px;
+            left: -6px;
+            justify-content: center;
+            align-items: center;
+            h2 {
+              font-size: 50px;
+            }
+          }
+        }
+        .star_number {
+          width: 24px;
+        }
+        .vote span {
+          color: #e9e9e9;
+          font-size: 14px;
+        }
+      }
+    }
+  }

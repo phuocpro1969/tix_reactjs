@@ -24,35 +24,35 @@ function Footer(props) {
               <a className="wp_logo" target="_blank">
                 <img
                   className="logo_f img-fluid"
-                  src="./images/cgv.png"
+                  src="../../../images/cgv.png"
                   alt="anh"
                 />
               </a>
               <a className="wp_logo" target="_blank">
                 <img
                   className="logo_f img-fluid"
-                  src="./images/bhd.png"
+                  src="../../../images/bhd.png"
                   alt="anh"
                 />
               </a>
               <a className="wp_logo" target="_blank">
                 <img
                   className="logo_f img-fluid"
-                  src="./images/galaxycine.png"
+                  src="../../../images/galaxycine.png"
                   alt="anh"
                 />
               </a>
               <a className="wp_logo" target="_blank">
                 <img
                   className="logo_f img-fluid"
-                  src="./images/cinestar.png"
+                  src="../../../images/cinestar.png"
                   alt="anh"
                 />
               </a>
               <a className="wp_logo" target="_blank">
                 <img
                   className="logo_f img-fluid"
-                  src="./images/404b8c4b80d77732e7426cdb7e24be20.png"
+                  src="../../../images/404b8c4b80d77732e7426cdb7e24be20.png"
                   alt="anh"
                 />
               </a>
@@ -61,35 +61,35 @@ function Footer(props) {
               <a className="wp_logo" target="_blank">
                 <img
                   className="logo_f img-fluid"
-                  src="./images/megags.png"
+                  src="../../../images/megags.png"
                   alt="anh"
                 />
               </a>
               <a className="wp_logo" target="_blank">
                 <img
                   className="logo_f img-fluid"
-                  src="./images/bt.jpg"
+                  src="../../../images/bt.jpg"
                   alt="anh"
                 />
               </a>
               <a className="wp_logo" target="_blank">
                 <img
                   className="logo_f img-fluid"
-                  src="./images/dongdacinema.png"
+                  src="../../../images/dongdacinema.png"
                   alt="anh"
                 />
               </a>
               <a className="wp_logo" target="_blank">
                 <img
                   className="logo_f img-fluid"
-                  src="./images/TOUCH.png"
+                  src="../../../images/TOUCH.png"
                   alt="anh"
                 />
               </a>
               <a className="wp_logo" target="_blank">
                 <img
                   className="logo_f img-fluid"
-                  src="./images/cnx.jpg"
+                  src="../../../images/cnx.jpg"
                   alt="anh"
                 />
               </a>
@@ -98,35 +98,35 @@ function Footer(props) {
               <a className="wp_logo" target="_blank">
                 <img
                   className="logo_f img-fluid"
-                  src="./images/STARLIGHT.png"
+                  src="../../../images/STARLIGHT.png"
                   alt="anh"
                 />
               </a>
               <a className="wp_logo" target="_blank">
                 <img
                   className="logo_f img-fluid"
-                  src="./images/dcine.png"
+                  src="../../../images/dcine.png"
                   alt="anh"
                 />
               </a>
               <a className="wp_logo" target="_blank">
                 <img
                   className="logo_f img-fluid"
-                  src="./images/zalopay_icon.png"
+                  src="../../../images/zalopay_icon.png"
                   alt="anh"
                 />
               </a>
               <a className="wp_logo" target="_blank">
                 <img
                   className="logo_f img-fluid"
-                  src="./images/payoo.jpg"
+                  src="../../../images/payoo.jpg"
                   alt="anh"
                 />
               </a>
               <a className="wp_logo" target="_blank">
                 <img
                   className="logo_f img-fluid"
-                  src="./images/VCB.png"
+                  src="../../../images/VCB.png"
                   alt="anh"
                 />
               </a>
@@ -135,35 +135,35 @@ function Footer(props) {
               <a className="wp_logo" target="_blank">
                 <img
                   className="logo_f img-fluid"
-                  src="./images/AGRIBANK.png"
+                  src="../../../images/AGRIBANK.png"
                   alt="anh"
                 />
               </a>
               <a className="wp_logo" target="_blank">
                 <img
                   className="logo_f img-fluid"
-                  src="./images/VIETTINBANK.png"
+                  src="../../../images/VIETTINBANK.png"
                   alt="anh"
                 />
               </a>
               <a className="wp_logo" target="_blank">
                 <img
                   className="logo_f img-fluid"
-                  src="./images/IVB.png"
+                  src="../../../images/IVB.png"
                   alt="anh"
                 />
               </a>
               <a className="wp_logo" target="_blank">
                 <img
                   className="logo_f img-fluid"
-                  src="./images/123go.png"
+                  src="../../../images/123go.png"
                   alt="anh"
                 />
               </a>
               <a className="wp_logo" target="_blank">
                 <img
                   className="logo_f img-fluid"
-                  src="./images/laban.png"
+                  src="../../../images/laban.png"
                   alt="anh"
                 />
               </a>
@@ -175,10 +175,10 @@ function Footer(props) {
                 <p className="footer_title text-center">MOBILE APP</p>
                 <div className="footer_app f_full mt-2">
                   <a className="link_app link_full mr-2">
-                    <img src="./images/apple-logo.png" alt="anh" />
+                    <img src="../../../images/apple-logo.png" alt="anh" />
                   </a>
                   <a className="link_app link_full ml-2">
-                    <img src="./images/android-logo.png" alt="anh" />
+                    <img src="../../../images/android-logo.png" alt="anh" />
                   </a>
                 </div>
               </div>
@@ -186,10 +186,10 @@ function Footer(props) {
                 <p className="footer_title text-center">SOCIAL</p>
                 <div className="footer_social f_full mt-2">
                   <a className="link_social link_full mr-2">
-                    <img src="./images/facebook-logo.png" alt="anh" />
+                    <img src="../../../images/facebook-logo.png" alt="anh" />
                   </a>
                   <a className="link_social link_full ml-2">
-                    <img src="./images/zalo-logo.png" alt="anh" />
+                    <img src="../../../images/zalo-logo.png" alt="anh" />
                   </a>
                 </div>
               </div>
@@ -201,7 +201,7 @@ function Footer(props) {
           <div className="col-xl-2--fixed col-xl-2 col-lg-2 col-md-2 text-center mb-4">
             <img
               className="img-fluid style_res"
-              src="./images/zion-logo.jpg"
+              src="../../../images/zion-logo.jpg"
               alt="anh"
             />
           </div>
@@ -231,7 +231,7 @@ function Footer(props) {
             <a>
               <img
                 className="img-fluid style_res notice_logo"
-                src="./images/d1e6bd560daa9e20131ea8a0f62e87f8.png"
+                src="../../../images/d1e6bd560daa9e20131ea8a0f62e87f8.png"
                 alt="anh"
               />
             </a>

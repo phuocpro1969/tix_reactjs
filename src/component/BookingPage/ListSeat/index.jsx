@@ -3,9 +3,12 @@ import { useSelector } from "react-redux";
 import SeatItem from "../SeatItem";
 import "./ListSeat.scss";
 function ListSeat(props) {
+  // console.log(props.listSeat);
   let listSeat = useSelector((state) => {
     return state.BookingReducer.listSeat;
   });
+  console.log("ok");
+  // console.log(listSeat);
   let row = listSeat.length / 16;
   function getListSeat() {
     let arrWItem = [];

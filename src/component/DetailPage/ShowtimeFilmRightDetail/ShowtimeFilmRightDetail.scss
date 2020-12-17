@@ -1,0 +1,19 @@
+.wp__tabRightDetailMovie{
+    width: 70%;
+    background-color: #ffffff;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    overflow: auto;
+    height: 700px;
+    &::-webkit-scrollbar {
+      width: 6px;
+      background-color: #F5F5F5;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #a8a8a8;
+  }
+  &::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: #F5F5F5;
+  }
+}

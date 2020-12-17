@@ -22,7 +22,7 @@ function TabFilmComingSoon(props) {
       for (let i = 1; i <= totalPage; i++) {
         rows.push(
           <ListFilm
-            key={i + "key"}
+            key={i + "keyAsdAsad"}
             pageItem={i}
             listMovie={listMovie}
             totalPage={totalPage}

@@ -70,7 +70,7 @@ const SelectMenuReducer = (state = initialState, action) => {
           newArrLichChieuPhim.push(objLichChieu);
         }
       });
-      // console.log(newArrLichChieuPhim);
+      console.log("asdsa", newArrLichChieuPhim);
       state.arrLichChieu = newArrLichChieuPhim;
       return { ...state };
     }

@@ -18,30 +18,3 @@
     opacity: 1 ;
     margin-left: 5px;
 }
-@media screen and (max-width: 768px) {
-    .slide__banner ol
-    {
-        bottom: 15px !important;
-    }
-    .slide__banner{
-        max-height: 315px;
-    }
-  }
-
-@media screen and (max-width: 576px) {
-    .wrapper .carousel__tix .slide__banner{
-        max-height: 170px;
-    }
-
-  }
-
-
-  @media screen and (max-width: 400px) {
-    .wrapper .carousel__tix .slide__banner{
-        max-height: 156px;
-        ol
-        {
-            bottom: 0px !important;
-        }
-    }
-  }

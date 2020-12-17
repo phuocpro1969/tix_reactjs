@@ -1,0 +1,28 @@
+.modal--fixed {
+  overflow: hidden;
+    .modal-dialog--fixed {
+      max-width: 900px;
+      height: auto;
+      .modal-content--fixed{
+        position: relative;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        width: 100%;
+        pointer-events: auto;
+        background:none !important;
+        background-clip: padding-box;
+        border: none;
+        border-radius: .3rem;
+        outline: 0;
+        .btn_close {
+          position: relative;
+          top: 15px;
+          right: -20px;
+          border:none;
+          outline: none;
+        }
+      }
+    }
+  }

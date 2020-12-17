@@ -3,7 +3,7 @@ import ListSessionHomeRight from "../ListSessionHomeRight";
 import "./CinemaSysHomeRightItem.scss";
 function CinemaSysHomeRightItem(props) {
   let { item } = props;
-  // console.log(item);
+  console.log(item);
   return (
     <div className="item__filmShow">
       <div className="wp__filmShow__info__item">

@@ -17,6 +17,7 @@ function BookingPageRight(props) {
   });
   function renderListCodeSeat() {
     if (listSeatSelected) {
+      // console.log(listSeatSelected);
       return listSeatSelected.map((item, index) => {
         return <span key={index}>{item.codeSeat} </span>;
       });

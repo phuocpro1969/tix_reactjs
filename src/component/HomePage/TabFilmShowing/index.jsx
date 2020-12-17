@@ -14,7 +14,7 @@ function TabFilmShowing(props) {
     nav: true,
     rewind: true,
     dots: false,
-    autoplay: true,
+    autoplay: false,
     smartSpeed: 500,
     autoplayTimeout: 20000,
   };
@@ -39,7 +39,7 @@ function TabFilmShowing(props) {
         rows.push(
           <ListFilm
             d={"sdsa"}
-            key={i + "key"}
+            key={i + "keyAB"}
             pageItem={i}
             listMovie={listMovie}
             totalPage={totalPage}

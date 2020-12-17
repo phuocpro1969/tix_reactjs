@@ -1,0 +1,27 @@
+.wp_tabDetailRightTop{
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    &::-webkit-scrollbar {
+      border-radius: 50px;
+      height: 4px;
+      background-color: #F5F5F5;
+    } 
+    &::-webkit-scrollbar-thumb {
+      border-radius: 50px;
+    background-color: #b4b4b4;
+    }
+    &::-webkit-scrollbar-track {
+      border-radius: 50px;
+      box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+      background-color: #F5F5F5;
+  }
+    ul.listDate{        
+    margin: 20px 10px 10px 10px !important;
+    width: 200%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    color:#ffffff;
+    }
+}

@@ -40,7 +40,7 @@ function ListTabFilm(props) {
           </li>
         </ul>
         <div
-          className="tab-content container-fluid container-fluid--fixed"
+          className="tab-content wp__tab__content container-fluid container-fluid--fixed"
           id="myTabContent"
         >
           <TabFilmShowing listMovie={listMovie} />

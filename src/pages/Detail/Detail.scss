@@ -1,0 +1,85 @@
+.content {
+    position: relative;
+  }
+  .modal-open{
+    padding-right: 0px !important;
+  }
+  @media screen and (max-width: 768px) {
+    .content .bottom_content .tab-content--fixed {
+      width: 100%;
+    }
+    .info_nav_left {
+      padding-left: 10px !important;
+    }
+    .info_nav_right {
+      padding-right: 10px !important;
+    }
+    .content .bottom_content .newsRelated_content .newsMoreHot .wp_news_thumb a.url_Newsthumb{
+      width: 100% !important;
+    }
+    .wp_news_thumb{
+      width: 100%;
+    }
+    .top_content__detail {
+      display: none;
+    }
+    .top_content__responsiveDetail img {
+      filter: none !important;
+      z-index: 1;
+      display: block !important;
+      height: auto;
+    }
+    .content .top_content .top_content__responsiveDetail a.play_responsive {
+      display: block;
+    }
+    .bottom_content .wp_info_film {
+      display: block !important;
+      margin-bottom: 30px !important;
+    }
+    .modal--fixed {
+      display: none !important;
+    }
+    .content .bottom_content .bc_nav__title {
+      width: 100%;
+      position: initial;
+    }
+    .content .bottom_content .bc_nav__title .wp_nav_a {
+      margin-bottom: 60px !important;
+    }
+    .info_nav_right {
+      padding: 0px 10px !important;
+    }
+  }
+  @media screen and (max-width: 576px) {
+    .content{
+      overflow:hidden !important;
+    }
+    .top_content__responsiveDetail{
+      height: 300px;
+    }
+    .tab-content--fixed #nav-showTimeDetail{
+      padding-left: 0px !important;
+      padding-right: 0px !important;
+    }
+    .wp__tabDetailMovie{
+      flex-direction: column;
+      .wp__tabLeftDetailMovie{
+        height: auto !important;
+        width: 100% !important;
+        ul.tabLeftDetailMenu{
+          display: flex;
+          li.wp__logoDetail{
+            .wpThumb__detailMovie{
+              width: 50px;
+            }
+            .title__detailMovie{
+              display: none;
+            }
+          }
+        }
+      }
+      .wp__tabRightDetailMovie{
+        width: 100% !important;
+      }
+    }
+  }

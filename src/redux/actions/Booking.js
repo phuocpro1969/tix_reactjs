@@ -69,10 +69,10 @@ function postBookingTicketRq(maLichChieu, danhSachVe, history) {
   };
 }
 export { postBookingTicketRq };
-function resetActivenotify(data) {
+function ResetActiveNotify(data) {
   return {
     type: "RESET_NOTIFY",
     payload: data,
-  }
+  };
 }
-export { resetActivenotify }
+export { ResetActiveNotify };

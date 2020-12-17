@@ -72,10 +72,14 @@ font-size: 20px;
 cursor: pointer;
 position: absolute;
 border-radius: 3px;
-padding: 10px 0px;
+
 width: 100%;
 background: #fb4226;
 text-align: center;
+a{
+    padding: 10px 0px;
+    display: block;
+}
 }
 .film:hover .showHover, .film:hover .hoverInfo button{
 visibility: visible;
@@ -96,35 +100,3 @@ border-radius: 5px;
 transition: background-color 0.3s linear;
 background: linear-gradient(to top,#000,transparent 100%);
 }
-@media screen and (max-width:768px) {
-    .film{
-        font-size: 13px;
-        height: 380px;
-        width: 175px;
-        }
-    .showHover{
-        font-size: 14px;
-    }
-}
-
-@media screen and (max-width: 576px) {
-    .film{
-        height: 200px;
-        width: 130px;
-        .info__film{
-            display: none;
-        }
-        }
-    .showHover{
-        display: none;
-    }
-  }
-  @media screen and (max-width: 400px) {
-    .film{
-        height: 185px;
-        width: 120px;
-        .info__film{
-            display: none;
-        }
-    }
-  }

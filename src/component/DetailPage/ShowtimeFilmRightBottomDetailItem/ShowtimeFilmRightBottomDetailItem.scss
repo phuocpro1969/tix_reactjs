@@ -1,0 +1,48 @@
+
+  .detailItemMovie{
+    border-bottom: 1px solid #eeeeee;
+    margin-bottom: 20px !important;
+    padding-bottom: 10px !important;
+    .top_detailInfoItemMovie{
+      &:hover{
+        cursor: pointer !important;
+      }
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px !important;
+      .thumb_detailInfoCinema{
+        margin-right: 12px !important;
+        width: 48px;
+        overflow: hidden;
+        height: auto;
+        img{
+          width: 100%;
+        }
+      }
+      .wp_detailInfoRight{
+        font-weight: 600;
+        p.title_detailInfo{
+          font-size: 15px;
+          line-height: 27px;
+        }
+        p.address_detailInfo{
+          color: #8d8d8d;
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 22px;
+          font-size: 13px;
+          a{
+            color: red;
+          }
+        }
+      }
+    }
+    .bottom_detailInfoItemMovie{
+      h3{
+        font-size: 17px;
+        font-weight: 600;
+        margin-bottom: 10px !important;
+      }
+
+    }
+  }

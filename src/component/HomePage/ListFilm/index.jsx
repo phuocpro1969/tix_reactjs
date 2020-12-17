@@ -3,7 +3,7 @@ import FilmItem from "../FilmItem";
 
 function ListFilm(props) {
   let listItemOnOnePage = [];
-  let { pageItem, listMovie, totalPage, d } = props;
+  let { pageItem, listMovie, totalPage } = props;
   // console.log(d);
   // console.log(pageItem);
   // console.log(listMovie);
@@ -14,7 +14,7 @@ function ListFilm(props) {
       for (let i = firstItem; i <= finalItem; i++) {
         // console.log(listMovie[i]);
         listItemOnOnePage.push(
-          <FilmItem movieItem={listMovie[i]} key={i + "keyne"} />
+          <FilmItem movieItem={listMovie[i]} key={i + "keynesad"} />
         );
       }
     } else {

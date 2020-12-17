@@ -70,58 +70,58 @@
         }
     }
 }
-@media screen and (max-width: 768px) {
-    // .selectMenu{
-    //     display: none;
-    // }
-    .application__text{
-        .app__textLeft:first-child{
-            letter-spacing: 4px !important;
-            word-spacing: 5px !important;
-        }
-        padding-top: 50px !important;
-        text-align: center;
-        margin-bottom:20px;
-    }
-    .wp__appCarousel{
-        left: 285px !important;
-    }
-  }
-  @media screen and (max-width: 576px) {
-    .application__text{
-        p.app__textLeft{
-            word-spacing: 1px !important;
-            letter-spacing: 1px !important;
-            font-size: 15px !important;
-        }
-        p.app__textSmartLeft{
-            font-size: 12px !important;
-        }
-    }
-    .wp__appCarousel{
-        left: 107px !important;
-    }
-    .wp__application .bg__application .application__sliderMobie{
-        padding: 0px !important;
-    }
- }
- @media screen and (max-width:400px) {
-    .wp__application .bg__application .application__sliderMobie img{
-        width: 100px;
-    }
-    .wp__appCarousel{
-        left: 140px !important;
-        top: 3px !important;
-    }
-    .wp__application .bg__application .application__sliderMobie{
-        padding: 0px !important;
-    }
-    .wp__application .bg__application .application__sliderMobie .wp__appCarousel{
-        width: 94px !important;
-        border-radius: 8px;
-        height: 203px;
-    }
-    .wp__application .bg__application{
-        padding: 0px 0 80px 0;
-    }
- }
+// @media screen and (max-width: 768px) {
+//     // .selectMenu{
+//     //     display: none;
+//     // }
+//     .application__text{
+//         .app__textLeft:first-child{
+//             letter-spacing: 4px !important;
+//             word-spacing: 5px !important;
+//         }
+//         padding-top: 50px !important;
+//         text-align: center;
+//         margin-bottom:20px;
+//     }
+//     .wp__appCarousel{
+//         left: 285px !important;
+//     }
+//   }
+//   @media screen and (max-width: 576px) {
+//     .application__text{
+//         p.app__textLeft{
+//             word-spacing: 1px !important;
+//             letter-spacing: 1px !important;
+//             font-size: 15px !important;
+//         }
+//         p.app__textSmartLeft{
+//             font-size: 12px !important;
+//         }
+//     }
+//     .wp__appCarousel{
+//         left: 107px !important;
+//     }
+//     .wp__application .bg__application .application__sliderMobie{
+//         padding: 0px !important;
+//     }
+//  }
+//  @media screen and (max-width:400px) {
+//     .wp__application .bg__application .application__sliderMobie img{
+//         width: 100px;
+//     }
+//     .wp__appCarousel{
+//         left: 140px !important;
+//         top: 3px !important;
+//     }
+//     .wp__application .bg__application .application__sliderMobie{
+//         padding: 0px !important;
+//     }
+//     .wp__application .bg__application .application__sliderMobie .wp__appCarousel{
+//         width: 94px !important;
+//         border-radius: 8px;
+//         height: 203px;
+//     }
+//     .wp__application .bg__application{
+//         padding: 0px 0 80px 0;
+//     }
+//  }

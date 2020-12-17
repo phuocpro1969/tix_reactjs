@@ -4,13 +4,17 @@ import Booking from "./pages/Booking";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import Detail from "./pages/Detail";
+import Layout from "./component/Layout";
 function App() {
   return (
-    <div>
+    <>
       <BrowserRouter>
         <Switch>
           <Route exact={true} path="/">
-            <Home />
+            <Layout>
+              <Home />
+            </Layout>
           </Route>
           <Route path="/Login">
             <Login />
@@ -18,12 +22,17 @@ function App() {
           <Route path="/Reg">
             <Register />
           </Route>
+          <Route path="/Detail/:idFilm">
+            <Layout>
+              <Detail />
+            </Layout>
+          </Route>
           <Route path="/Booking/:code">
             <Booking />
           </Route>
         </Switch>
       </BrowserRouter>
-    </div>
+    </>
   );
 }
 

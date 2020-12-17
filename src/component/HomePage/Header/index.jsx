@@ -15,7 +15,7 @@ function Header(props) {
     if (user) {
       return (
         <div className="info-user">
-          <img src="./images/anh-dai-dien.png" alt="username" />
+          <img src="../../../images/anh-dai-dien.png" alt="username" />
           <span className="username ml-1">{user.taiKhoan}</span>
           <div className="info-user__logout" onClick={handleLogout}>
             Đăng xuất
@@ -47,9 +47,13 @@ function Header(props) {
         </a>
         <a className="back_page" />
         <div className="header__logo">
-          <a>
-            <img src="./images/web-logo.png" className="img-fluid" alt="logo" />
-          </a>
+          <NavLink exact={true} to="/">
+            <img
+              src="../../../images/web-logo.png"
+              className="img-fluid"
+              alt="logo"
+            />
+          </NavLink>
         </div>
         <div className="header__wp-list-group">
           <ul className="list-unstyled list-item mb-0">
@@ -117,7 +121,7 @@ function Header(props) {
             <div className="wp-info-drop">
               <a>
                 <img
-                  src="./images/anh-dai-dien.png"
+                  src="../../../images/anh-dai-dien.png"
                   className="img-fluid"
                   alt="anh dai dien"
                 />

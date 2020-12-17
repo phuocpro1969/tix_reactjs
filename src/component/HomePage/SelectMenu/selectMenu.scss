@@ -88,17 +88,6 @@
         animation-name: slideIn;
       }
 }
-@media screen and (max-width: 768px) {
-    .selectMenu{
-        display: none;
-    }
-  }
-
-  @media screen and (max-width: 576px) {
-    .tab__menu{
-        width: 100% !important;
-    }
-  }
   @keyframes animeActive{
       from {transform: rotate3d(0);}
       to {transform: rotate3d(1, 1, 1, 10deg);}

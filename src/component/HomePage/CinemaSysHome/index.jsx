@@ -10,7 +10,7 @@ function CinemaSysHome(props) {
   let [idlogo, setidlogo] = useState("BHDStar");
   let [activeRap1, setactiveRap1] = useState(false);
   let dispatch = useDispatch();
-  console.log(activeRap1);
+  // console.log(activeRap1);
   function setIdLogo(id) {
     dispatch(GetInfoShowTimeOfEachSys(id));
     setidlogo(id);

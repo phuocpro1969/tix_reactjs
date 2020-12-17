@@ -4,7 +4,7 @@ import "./bookingPageLeft.scss";
 import swal from "sweetalert";
 import { useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { resetActivenotify } from "../../../redux/actions/Booking"
+import { ResetActiveNotify } from "../../../redux/actions/Booking";
 function changeColorTex(logo) {
   if (logo === "BHD Star Cineplex ") {
     return "greenColorTextBrand";
@@ -59,7 +59,7 @@ function BookingPageLeft(props) {
           dangerMode: true,
         }).then((ress) => {
           if (ress) {
-            swal("PLEASE BOOKING AGAIN IN 2:59!", {
+            swal("PLEASE BOOKING AGAIN IN 2:60!", {
               icon: "success",
               button: "CONFIRM",
             }).then(() => {
@@ -75,8 +75,8 @@ function BookingPageLeft(props) {
   useEffect(() => {
     if (countNotify !== 0) {
       swal("You shouldn't leave the middle seat empty!").then(() => {
-        dispatch(resetActivenotify(0));
-      })
+        dispatch(ResetActiveNotify(0));
+      });
     }
   }, [countNotify]);
   return (
