@@ -1,6 +1,5 @@
 import format from "date-format";
 const initialState = {
-  firstIdRap: null,
   infoFilm: null,
   listCinemaSys: [],
   cinemaSysSelected: null,
@@ -8,6 +7,7 @@ const initialState = {
   listDate: [],
   minDate: null,
   ShowTimeBottom: [],
+  firstIdRap: null,
 };
 const DetailReducer = (state = initialState, action) => {
   switch (action.type) {
@@ -61,7 +61,7 @@ const DetailReducer = (state = initialState, action) => {
     case "GET_INFO_FILM_BY_DATE": {
       // console.log(action.payload);
       // console.log(state.showTimeSelected);
-      let filterShowTime = state.showTimeSelected.filter((item) => {
+      let filterShowTime = state.showTimeSelected?.filter((item) => {
         return (
           format("yyyy/MM/dd", new Date(item.ngayChieuGioChieu)) ===
           action.payload
@@ -70,16 +70,16 @@ const DetailReducer = (state = initialState, action) => {
       //show time nay co the chua tu 2 rap tro len trong cung he thong vs cung 1 gio chieu
 
       //lay danh sach cac rap hien chieu o he thong rap nay tai cung thoi gian.
-      let listCumRap = filterShowTime.map((item, index) => {
+      let listCumRap = filterShowTime?.map((item, index) => {
         return item.thongTinRap.maCumRap;
       });
-      listCumRap = listCumRap.filter((item, index) => {
-        return item.indexOf(item) === index;
+      listCumRap = listCumRap?.filter((item, index) => {
+        return listCumRap.indexOf(item) === index;
       });
       // console.log(listCumRap);
       // console.log(filterShowTime);
       let arrParent = [];
-      for (let i = 0; i < listCumRap.length; i++) {
+      for (let i = 0; i < listCumRap?.length; i++) {
         let arrChild = [];
         for (let j = 0; j < filterShowTime.length; j++) {
           if (listCumRap[i] === filterShowTime[j].thongTinRap.maCumRap) {
@@ -93,8 +93,33 @@ const DetailReducer = (state = initialState, action) => {
       return { ...state, ShowTimeBottom: infoBottom };
     }
     case "GET_FIRST_INFO": {
-      console.log("sadsa", action.payload);
-      return { ...state, firstIdRap: action.payload };
+      console.log("sadsa", action.payload1);
+      console.log("sadsa", action.payload2);
+      let arrLichChieuTheoRap = action.payload2?.filter((item) => {
+        return item.thongTinRap.maHeThongRap === action.payload1;
+      });
+      console.log(arrLichChieuTheoRap);
+      state.showTimeSelected = arrLichChieuTheoRap;
+      arrLichChieuTheoRap = arrLichChieuTheoRap?.map((item, index) => {
+        return format("yyyy/MM/dd", new Date(item.ngayChieuGioChieu));
+      });
+      console.log(arrLichChieuTheoRap);
+      if (arrLichChieuTheoRap) {
+        let filterArrDate = [...arrLichChieuTheoRap];
+        filterArrDate = filterArrDate?.filter((item, index) => {
+          return filterArrDate.indexOf(item) === index;
+        });
+        console.log(filterArrDate);
+        filterArrDate = filterArrDate.sort((a, b) => {
+          if (a < b) return -1;
+          return 1;
+        });
+        let minDate = filterArrDate[0];
+        state.minDate = minDate;
+        state.listDate = [...filterArrDate];
+      }
+
+      return { ...state };
     }
     default:
       return { ...state };

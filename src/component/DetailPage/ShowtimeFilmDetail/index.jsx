@@ -11,11 +11,15 @@ function ShowtimeFilmDetail(props) {
     dispatch(getCinemaSysRequest());
   }, []);
   let idRap = useSelector((state) => {
-    return state.DetailReducer.cinemaSysSelected?.maHeThong;
+    return state.DetailReducer.cinemaSysSelected?.maHeThongRap;
   });
+  let infoFilm = useSelector((state) => {
+    return state.DetailReducer.infoFilm?.lichChieu;
+  });
+  //moi chinh sua
   useEffect(() => {
-    dispatch(getFirstInfoShowTime(idRap));
-  }, [idRap]);
+    dispatch(getFirstInfoShowTime(idRap, infoFilm));
+  });
   return (
     <div
       className="tab-pane fade show active container-fluid tab_wp_Showtimes"

@@ -75,10 +75,11 @@ function showInfoFilmByDate(data) {
   };
 }
 export { showInfoFilmByDate };
-function getFirstInfoShowTime(data) {
+function getFirstInfoShowTime(data1, data2) {
   return {
     type: "GET_FIRST_INFO",
-    payload: data,
+    payload1: data1,
+    payload2: data2,
   };
 }
 export { getFirstInfoShowTime };

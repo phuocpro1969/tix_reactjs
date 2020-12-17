@@ -11,11 +11,17 @@ function ShowtimeFilmRightBottomDetail(props) {
   let infoBottom = useSelector((state) => {
     return state.DetailReducer.ShowTimeBottom;
   });
+  let cinemaSysSelected = useSelector((state) => {
+    return state.DetailReducer.cinemaSysSelected;
+  });
   console.log(infoBottom);
   // console.log(infoBottomDetail);
   useEffect(() => {
     dispatch(showInfoFilmByDate(date));
   }, [date]);
+  useEffect(() => {
+    dispatch(showInfoFilmByDate(date));
+  }, [cinemaSysSelected]);
   const renderInfoBottom = () => {
     if (infoBottom.length > 0) {
       return infoBottom.map((item, index) => {
