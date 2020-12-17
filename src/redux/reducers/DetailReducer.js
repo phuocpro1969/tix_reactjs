@@ -93,8 +93,8 @@ const DetailReducer = (state = initialState, action) => {
       return { ...state, ShowTimeBottom: infoBottom };
     }
     case "GET_FIRST_INFO": {
-      console.log("sadsa", action.payload1);
-      console.log("sadsa", action.payload2);
+      console.log("1", action.payload1);
+      console.log("2", action.payload2);
       let arrLichChieuTheoRap = action.payload2?.filter((item) => {
         return item.thongTinRap.maHeThongRap === action.payload1;
       });
