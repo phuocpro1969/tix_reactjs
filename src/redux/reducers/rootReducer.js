@@ -5,6 +5,7 @@ import CinemaHome from "./CinemaHome";
 import UserReducer from "./UserReducer";
 import BookingReducer from "./BookingReducer";
 import DetailReducer from "./DetailReducer";
+import CommonReducer from "./CommonReducer";
 const rootReducer = combineReducers({
   SelectMenuReducer,
   Movie,
@@ -12,5 +13,6 @@ const rootReducer = combineReducers({
   UserReducer,
   BookingReducer,
   DetailReducer,
+  CommonReducer,
 });
 export { rootReducer };

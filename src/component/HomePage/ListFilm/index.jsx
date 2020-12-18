@@ -14,13 +14,13 @@ function ListFilm(props) {
       for (let i = firstItem; i <= finalItem; i++) {
         // console.log(listMovie[i]);
         listItemOnOnePage.push(
-          <FilmItem movieItem={listMovie[i]} key={i + "keynesad"} />
+          <FilmItem movieItem={listMovie[i]} code={i} key={i + "keynesad"} />
         );
       }
     } else {
       for (let i = firstItem; i < listMovie?.length; i++) {
         listItemOnOnePage.push(
-          <FilmItem movieItem={listMovie[i]} key={i + "keyne"} />
+          <FilmItem movieItem={listMovie[i]} key={i + "keyne12344"} />
         );
       }
     }

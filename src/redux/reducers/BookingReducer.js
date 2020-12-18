@@ -61,7 +61,6 @@ const BookingReducer = (state = initialState, action) => {
         newListSeatSelected.splice(index, 1);
       }
       state.listSeatSelected = newListSeatSelected;
-
       return {
         ...state,
         total: state.total,

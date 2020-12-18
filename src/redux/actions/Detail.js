@@ -1,6 +1,8 @@
 import axios from "axios";
+import { startLoading, stopLoading } from "./Common";
 function getInfoDetailFilmRequest(codeFilm) {
   return (dispatch) => {
+    dispatch(startLoading());
     axios({
       method: "GET",
       url: `https://movie0706.cybersoft.edu.vn/api/QuanLyPhim/LayThongTinPhim?MaPhim=${codeFilm}`,
@@ -9,10 +11,12 @@ function getInfoDetailFilmRequest(codeFilm) {
       .then(function (ress) {
         dispatch(getInfoDetailFilmSuccess(ress.data));
         // console.log(ress.data);
+        dispatch(stopLoading());
       })
       .catch(function (err) {
         dispatch(getInfoDetailFilmFailed(err));
         // console.log(err);
+        dispatch(stopLoading());
       });
   };
 }

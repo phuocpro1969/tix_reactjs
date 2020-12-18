@@ -3,7 +3,6 @@ import { useSelector } from "react-redux";
 import ShowtimeFilmRightTopDetailItem from "../ShowtimeFilmRightTopDetailItem";
 import "./ShowtimeFilmRightTopDetail.scss";
 function ShowtimeFilmRightTopDetail(props) {
-  // console.log("sadsa", listDate);
   let listDate = useSelector((state) => {
     return state.DetailReducer.listDate;
   });

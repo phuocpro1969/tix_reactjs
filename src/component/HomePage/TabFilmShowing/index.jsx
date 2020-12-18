@@ -6,8 +6,9 @@ import OwlCarousel from "react-owl-carousel2";
 import "./TabFilmShowing.scss";
 import ListFilm from "../ListFilm";
 import format from "date-format";
-let rows = [];
+
 function TabFilmShowing(props) {
+  let rows = [];
   let { listMovie } = props;
   const options = {
     items: 1,
@@ -31,6 +32,8 @@ function TabFilmShowing(props) {
   // } else {
   //   console.log("ngay hien tai bang ngay cua phim");
   // }
+  let dem = 0;
+  dem++;
   function showPageSlider() {
     if (listMovie.length > 0) {
       let totalPage = Math.ceil(listMovie.length / 8);
@@ -38,8 +41,7 @@ function TabFilmShowing(props) {
       for (let i = 1; i <= totalPage; i++) {
         rows.push(
           <ListFilm
-            d={"sdsa"}
-            key={i + "keyAB"}
+            key={i + "keyABD" + dem}
             pageItem={i}
             listMovie={listMovie}
             totalPage={totalPage}

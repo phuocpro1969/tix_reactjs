@@ -1,6 +1,8 @@
 import axios from "axios";
+import { startLoading, stopLoading } from "./Common";
 function GetListMovieTheaterByIdRequest(id) {
   return (dispatch) => {
+    // dispatch(startLoading());
     axios({
       method: "GET",
       url: `https://movie0706.cybersoft.edu.vn/api/QuanLyRap/LayThongTinLichChieuPhim?MaPhim=${id}`,
@@ -8,9 +10,11 @@ function GetListMovieTheaterByIdRequest(id) {
     })
       .then(function (ress) {
         dispatch(GetListMovieTheaterByIdSuccess(ress.data));
+        // dispatch(stopLoading());
       })
       .catch(function (err) {
         dispatch(GetListMovieTheaterByIdFailed(err));
+        // dispatch(stopLoading());
       });
   };
 }

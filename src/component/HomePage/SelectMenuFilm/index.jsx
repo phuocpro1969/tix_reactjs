@@ -8,7 +8,7 @@ function SelectMenuFilm(props) {
   useEffect(() => {
     dispatch(getListFilmRequest());
   }, []);
-
+  console.log("ok");
   let statusFilm = useSelector((state) => {
     return state.SelectMenuReducer.statusFilm;
   });

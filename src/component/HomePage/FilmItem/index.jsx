@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import "./FilmItem.scss";
 function FilmItem(props) {
-  let { movieItem } = props;
+  let { movieItem, code } = props;
   // console.log(movieItem);
   return (
     <div className="col-md-4 col-lg-3 col-sm-6 col-sm-6--fixed col-6 text-center">
@@ -17,7 +17,7 @@ function FilmItem(props) {
         </NavLink>
         <div className="info__film text-left">
           <div className="nameFilm">
-            {/* <span className="codeFilm">C18</span> */}
+            <span className="codeFilm">C{code}</span>
             {movieItem?.tenPhim}
           </div>
           <div className="timeFilm">100 phút - {movieItem?.danhGia}IMDb</div>

@@ -1,14 +1,12 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React from "react";
+import { useSelector } from "react-redux";
 import ShowtimeFilmLeftDetailItem from "../ShowtimeFilmLeftDetailItem";
 import "./ShowtimeFilmLeftDetail.scss";
 
 function ShowtimeFilmLeftDetail(props) {
-  let dispatch = useDispatch();
   let listCinema = useSelector((state) => {
     return state.DetailReducer.listCinemaSys;
   });
-
   function renderListCinema() {
     return listCinema?.map((item, index) => {
       return <ShowtimeFilmLeftDetailItem key={index} item={item} />;

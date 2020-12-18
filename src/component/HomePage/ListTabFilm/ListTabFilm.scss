@@ -21,16 +21,20 @@
                 cursor: pointer;
                 color: #000;
                 &:hover{
+                 
+                    transform:scale(1);
                     border-color: #ffffff !important;
                 }
             }
             a.nav-link.active{
-                font-weight: 700;
+                font-weight: 600;
                 transition: 0.5s all ease-in-out;
                 transform: scale(1);
                 color: #fa5238;
             }
-    
+            &:hover{
+                margin-left:0px 12px;
+            }
         }
     }
     .container-fluid--fixed{

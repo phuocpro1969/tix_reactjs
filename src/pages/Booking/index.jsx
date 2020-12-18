@@ -5,6 +5,7 @@ import BookingPageLeft from "../../component/BookingPage/BookingPageLeft";
 import BookingPageRight from "../../component/BookingPage/BookingPageRight";
 import "./booking.scss";
 import { getBookingRequest } from "../../redux/actions/Booking";
+import Loading from "../../component/Loading";
 function Booking(props) {
   const user = JSON.parse(localStorage.getItem("user"));
   let dispatch = useDispatch();
@@ -17,6 +18,16 @@ function Booking(props) {
   useEffect(() => {
     dispatch(getBookingRequest(code));
   }, []);
+  let isLoading = useSelector((state) => {
+    return state.CommonReducer.isLoading;
+  });
+  function render() {
+    if (isLoading) {
+      return <Loading />;
+    } else {
+      return renderbookingPage(user);
+    }
+  }
   function renderbookingPage(user) {
     if (user) {
       if (bookingInfo) {
@@ -33,7 +44,7 @@ function Booking(props) {
       return <Redirect exact={true} from={`/Booking/${code}`} to="/Login" />;
     }
   }
-  return <>{renderbookingPage(user)}</>;
+  return <>{render()}</>;
 }
 
 export default Booking;

@@ -4,8 +4,9 @@ import "react-owl-carousel2/src/owl.carousel.css";
 import "react-owl-carousel2/src/owl.theme.default.css";
 import OwlCarousel from "react-owl-carousel2";
 import ListFilm from "../ListFilm";
-let rows = [];
+
 function TabFilmComingSoon(props) {
+  let rows = [];
   let { listMovie } = props;
   const options = {
     items: 1,

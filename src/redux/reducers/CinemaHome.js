@@ -5,17 +5,21 @@ const initialState = {
   ListCinemaBrands: [],
   CinemaBrandSelected: null,
   ListFilm: [],
+  isLoadingSys: false,
 };
 const CinemaHome = (state = initialState, action) => {
   switch (action.type) {
     case "GET_CINEMASYS_SUCCESS": {
-      return { ...state, CinemaSys: action.payload };
+      let newCinemaSys = [...action.payload];
+      return { ...state, CinemaSys: newCinemaSys };
     }
     case "GET_LIST_CINEMA_BRAND_SUCCESS": {
+      let newListCinemaBrands = [...action.payload];
+      let maCumRap = newListCinemaBrands[0].maCumRap;
       return {
         ...state,
-        ListCinemaBrands: action.payload,
-        CinemaBrandSelected: action.payload[0].maCumRap,
+        ListCinemaBrands: newListCinemaBrands,
+        CinemaBrandSelected: maCumRap,
       };
     }
     case "GET_INFO_SHOW_TIME_EACH_SYS_SUCCESS": {
@@ -27,7 +31,7 @@ const CinemaHome = (state = initialState, action) => {
         let dsCumRap = action.payload[0]?.lstCumRap;
         // console.log(dsCumRap);
         // console.log(dsCumRap[0].danhSachPhim);
-        film = dsCumRap[0].danhSachPhim;
+        film = [...dsCumRap[0].danhSachPhim];
       }
       return {
         ...state,
@@ -61,7 +65,7 @@ const CinemaHome = (state = initialState, action) => {
         let film = [];
         let maCumRap = action.payload;
         if (newCumRap.length > 0) {
-          film = newCumRap[0].danhSachPhim;
+          film = [...newCumRap[0].danhSachPhim];
           maCumRap = newCumRap[0].maCumRap;
         }
         return { ...state, ListFilm: film, CinemaBrandSelected: maCumRap };

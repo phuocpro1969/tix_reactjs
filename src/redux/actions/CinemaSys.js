@@ -1,6 +1,7 @@
 import axios from "axios";
 function getListCinemaSysRequest() {
   return (dispatch) => {
+    // dispatch(startLoadingSys());
     axios({
       method: "GET",
       url:
@@ -10,10 +11,12 @@ function getListCinemaSysRequest() {
       .then(function (ress) {
         dispatch(getListCinemaSysSuccess(ress.data));
         // console.log(ress.data);
+        // dispatch(stopLoadingSys());
       })
       .catch(function (err) {
         dispatch(getListCinemaSysFailed(err));
         console.log(err);
+        // dispatch(stopLoadingSys());
       });
   };
 }
@@ -60,3 +63,14 @@ function GetInfoShowTimeOfEachSysFailed(err) {
   };
 }
 export { GetInfoShowTimeOfEachSys };
+export function startLoadingSys() {
+  return {
+    type: "START_LOADIND_SYS",
+  };
+}
+
+export function stopLoadingSys() {
+  return {
+    type: "STOP_LOADIND_SYS",
+  };
+}

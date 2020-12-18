@@ -1,6 +1,8 @@
 import axios from "axios";
+import { startLoading, stopLoading } from "./Common";
 function GetListMovieRequest() {
   return (dispatch) => {
+    dispatch(startLoading());
     axios({
       method: "GET",
       url:
@@ -10,10 +12,12 @@ function GetListMovieRequest() {
       .then(function (ress) {
         dispatch(GetListMovieSuccess(ress.data));
         // console.log(ress.data);
+        dispatch(stopLoading());
       })
       .catch(function (err) {
         dispatch(GetListMovieFailed(err));
         console.log(err);
+        // dispatch(stopLoading());
       });
   };
 }

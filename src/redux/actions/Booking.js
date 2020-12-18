@@ -1,7 +1,9 @@
 import axios from "axios";
 import swal from "sweetalert";
+import { startLoading, stopLoading } from "./Common";
 function getBookingRequest(codeShowTime) {
   return (dispatch) => {
+    dispatch(startLoading());
     axios({
       method: "GET",
       url: `https://movie0706.cybersoft.edu.vn/api/QuanLyDatVe/LayDanhSachPhongVe?MaLichChieu=${codeShowTime}`,
@@ -10,10 +12,12 @@ function getBookingRequest(codeShowTime) {
       .then(function (ress) {
         dispatch(getBookingSuccess(ress.data));
         // console.log(ress.data);
+        dispatch(stopLoading());
       })
       .catch(function (err) {
         dispatch(getBookingFailed(err));
         // console.log(err);
+        dispatch(stopLoading());
       });
   };
 }

@@ -4,10 +4,6 @@ import "./ShowtimeFilmRightBottomDetailItem.scss";
 
 function ShowtimeFilmRightBottomDetailItem(props) {
   let { item } = props;
-  // if (item.length > 0) {
-  //   console.log(item);
-  // }
-  // let arrName = item?.thongTinRap.split("-");
   function renderName() {
     if (item.length > 0) {
       let arrName;

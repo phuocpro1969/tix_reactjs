@@ -9,7 +9,7 @@ import SelectMenuTime from "../SelectMenuTime";
 import { NavLink } from "react-router-dom";
 function SelectMenu(props) {
   let nameFilm = useSelector((state) => {
-    return state.SelectMenuReducer.statusFilm;
+    return state.SelectMenuReducer?.statusFilm;
   });
   let nameCinema = useSelector((state) => {
     return state.SelectMenuReducer.statusCinemaSystem;
@@ -24,7 +24,7 @@ function SelectMenu(props) {
     return state.SelectMenuReducer.codeShowTime;
   });
   let dispatch = useDispatch();
-  let [idFilm, setIdFilm] = useState(-1);
+  let [idFilm, setIdFilm] = useState(1324);
   function getIdFilm(id) {
     setIdFilm(id);
   }

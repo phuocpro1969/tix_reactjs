@@ -12,13 +12,14 @@ const initialState = {
 const SelectMenuReducer = (state = initialState, action) => {
   switch (action.type) {
     case "GET_LIST_FILM_SUCCESS": {
-      return { ...state, listFilm: action.payload };
+      let newListFilm = [...action.payload];
+      return { ...state, listFilm: newListFilm };
     }
     case "SHOW_NAME_FILM_ON_MENU": {
       return { ...state, statusFilm: action.payload };
     }
     case "GET_MOVIETHEATER_SUCCESS": {
-      return { ...state, CinemaSystem: action.payload };
+      return { ...state, CinemaSystem: { ...action.payload } };
     }
     case "SHOW_NAME_THEATER_ON_MENU": {
       return { ...state, statusCinemaSystem: action.payload };
@@ -43,7 +44,8 @@ const SelectMenuReducer = (state = initialState, action) => {
         return item.length > 0;
       });
       console.log(newRapItem[0][0]);
-      return { ...state, Onerap: newRapItem[0][0] };
+      let infoNewRap = { ...newRapItem[0][0] };
+      return { ...state, Onerap: infoNewRap };
     }
     case "SHOW_DATE_ON_MENU": {
       return { ...state, statusDate: action.payload };
@@ -71,7 +73,7 @@ const SelectMenuReducer = (state = initialState, action) => {
         }
       });
       console.log("asdsa", newArrLichChieuPhim);
-      state.arrLichChieu = newArrLichChieuPhim;
+      state.arrLichChieu = [...newArrLichChieuPhim];
       return { ...state };
     }
     case "SHOW_TIME_ON_MENU": {
@@ -88,6 +90,7 @@ const SelectMenuReducer = (state = initialState, action) => {
       return { ...state, statusLichChieu: action.status };
     }
     case "GET_CODE_SHOW_TIME": {
+      console.log(action.payload);
       return { ...state, codeShowTime: action.payload };
     }
     default:
