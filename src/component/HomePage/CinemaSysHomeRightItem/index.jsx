@@ -1,16 +1,17 @@
 import React from "react";
 import ListSessionHomeRight from "../ListSessionHomeRight";
 import "./CinemaSysHomeRightItem.scss";
+
 function CinemaSysHomeRightItem(props) {
   let { item } = props;
-  console.log(item);
   return (
     <div className="item__filmShow">
       <div className="wp__filmShow__info__item">
-        <div
+        <div 
           className="wp__filmShow__info__top"
           data-toggle="collapse"
           href={"#collapseInfo" + item.maPhim}
+          key={"key_" + item.maPhim}
         >
           <a className="wp__thumb__filmShow">
             <img
@@ -29,7 +30,8 @@ function CinemaSysHomeRightItem(props) {
         </div>
         <div
           className="wp__filmShow__info__bottom collapse"
-          id={"collapseInfo" + item.maPhim}
+          id={"collapseInfo" + item.maPhim} 
+          key={"key_phim"+item.maPhim}
         >
           <h4>2D Digital</h4>
           <ListSessionHomeRight lstLichChieu={item.lstLichChieuTheoPhim} />

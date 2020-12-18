@@ -7,12 +7,12 @@ import BookingReducer from "./BookingReducer";
 import DetailReducer from "./DetailReducer";
 import CommonReducer from "./CommonReducer";
 const rootReducer = combineReducers({
+  CommonReducer,
+  UserReducer,
   SelectMenuReducer,
   Movie,
   CinemaHome,
-  UserReducer,
   BookingReducer,
   DetailReducer,
-  CommonReducer,
 });
 export { rootReducer };

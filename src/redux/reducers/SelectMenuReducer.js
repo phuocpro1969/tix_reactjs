@@ -10,6 +10,7 @@ const initialState = {
   codeShowTime: null,
 };
 const SelectMenuReducer = (state = initialState, action) => {
+  
   switch (action.type) {
     case "GET_LIST_FILM_SUCCESS": {
       let newListFilm = [...action.payload];
@@ -25,7 +26,6 @@ const SelectMenuReducer = (state = initialState, action) => {
       return { ...state, statusCinemaSystem: action.payload };
     }
     case "RESET_THEATER_BY_FILM": {
-      console.log(action.status);
       return { ...state, statusCinemaSystem: action.status };
     }
     case "GET_DATE_SHOWTIME": {
@@ -43,7 +43,6 @@ const SelectMenuReducer = (state = initialState, action) => {
       let newRapItem = newRap.filter((item) => {
         return item.length > 0;
       });
-      console.log(newRapItem[0][0]);
       let infoNewRap = { ...newRapItem[0][0] };
       return { ...state, Onerap: infoNewRap };
     }
@@ -51,7 +50,6 @@ const SelectMenuReducer = (state = initialState, action) => {
       return { ...state, statusDate: action.payload };
     }
     case "RESET_DATE_BY_THEATER": {
-      console.log(action.status);
       return { ...state, statusDate: action.status };
     }
     case "RESET_DATE_BY_LIST_FILM": {
@@ -60,8 +58,6 @@ const SelectMenuReducer = (state = initialState, action) => {
     case "GET_TIME_SHOW_TIME": {
       let newArrLichChieuPhim = [];
       state.arrLichChieu = [];
-      console.log(state.Onerap);
-      console.log(action.payload);
       newArrLichChieuPhim = [...state.arrLichChieu];
       state.Onerap.lichChieuPhim.map((item, index) => {
         if (item.ngayChieuGioChieu.indexOf(action.payload) === 0) {
@@ -71,8 +67,8 @@ const SelectMenuReducer = (state = initialState, action) => {
           };
           newArrLichChieuPhim.push(objLichChieu);
         }
+        return item;
       });
-      console.log("asdsa", newArrLichChieuPhim);
       state.arrLichChieu = [...newArrLichChieuPhim];
       return { ...state };
     }
@@ -83,14 +79,12 @@ const SelectMenuReducer = (state = initialState, action) => {
       return { ...state, statusLichChieu: action.status };
     }
     case "RESET_TIME_BY_THEATER": {
-      console.log(action.status);
       return { ...state, statusLichChieu: action.status };
     }
     case "RESET_TIME_BY_FILM": {
       return { ...state, statusLichChieu: action.status };
     }
     case "GET_CODE_SHOW_TIME": {
-      console.log(action.payload);
       return { ...state, codeShowTime: action.payload };
     }
     default:

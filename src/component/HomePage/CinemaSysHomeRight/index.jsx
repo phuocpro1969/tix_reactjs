@@ -11,7 +11,6 @@ function CinemaSysHomeRight(props) {
   let CinemaBrandSelected = useSelector((state) => {
     return state.CinemaHome.CinemaBrandSelected;
   });
-  console.log(listMovie);
   function ShowListFilmByLogo() {
     if (inFoShowTimeOfSys[0] !== undefined) {
       let listMaCumRap = inFoShowTimeOfSys[0].lstCumRap.map((i, idx) => {

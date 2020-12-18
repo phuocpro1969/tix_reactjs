@@ -12,9 +12,6 @@ function SelectMenuTime(props) {
   let statusDate = useSelector((state) => {
     return state.SelectMenuReducer.statusDate;
   });
-  // console.log(filmItem);
-  // console.log(statusDate);
-  // console.log(listTime);
   function showListTime() {
     return listTime?.map((item, index) => {
       return <SelectMenuTimeItem item={item} key={index} />;

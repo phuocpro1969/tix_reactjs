@@ -1,9 +1,15 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./FilmItem.scss";
+import {resetCount} from "../../../redux/actions/getListFilmAction"
+import { useDispatch } from "react-redux";
 function FilmItem(props) {
   let { movieItem, code } = props;
   // console.log(movieItem);
+  let dispatch = useDispatch();
+  function handle() {
+    dispatch(resetCount(0));
+  }
   return (
     <div className="col-md-4 col-lg-3 col-sm-6 col-sm-6--fixed col-6 text-center">
       <div className="film">
@@ -22,7 +28,7 @@ function FilmItem(props) {
           </div>
           <div className="timeFilm">100 phút - {movieItem?.danhGia}IMDb</div>
           <div className="showHover">
-            <NavLink to={`/Detail/${movieItem?.maPhim}`} className="text-white">
+            <NavLink to={`/Detail/${movieItem?.maPhim}`} className="text-white" onClick={handle}>
               Mua vé
             </NavLink>
           </div>

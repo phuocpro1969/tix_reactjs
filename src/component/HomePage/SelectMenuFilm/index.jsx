@@ -8,7 +8,6 @@ function SelectMenuFilm(props) {
   useEffect(() => {
     dispatch(getListFilmRequest());
   }, []);
-  console.log("ok");
   let statusFilm = useSelector((state) => {
     return state.SelectMenuReducer.statusFilm;
   });
@@ -16,9 +15,7 @@ function SelectMenuFilm(props) {
     return state.SelectMenuReducer.listFilm;
   });
   function showListMenuFilm() {
-    // console.log(listMovie);
     if (listMovie.length > 0) {
-      // console.log(listMovie);
       return listMovie.map((item, index) => {
         return (
           <SelectMenuFilmItem

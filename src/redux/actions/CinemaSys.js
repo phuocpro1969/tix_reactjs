@@ -11,7 +11,7 @@ function getListCinemaSysRequest() {
       .then(function (ress) {
         dispatch(getListCinemaSysSuccess(ress.data));
         // console.log(ress.data);
-        // dispatch(stopLoadingSys());
+        dispatch(stopLoadingSys());
       })
       .catch(function (err) {
         dispatch(getListCinemaSysFailed(err));

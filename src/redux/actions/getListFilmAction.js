@@ -2,7 +2,7 @@ import axios from "axios";
 import { startLoading, stopLoading } from "./Common";
 function getListFilmRequest() {
   return (dispatch) => {
-    // dispatch(startLoading());
+    dispatch(startLoading());
     axios({
       method: "GET",
       url:
@@ -11,14 +11,12 @@ function getListFilmRequest() {
     })
       .then(function (ress) {
         dispatch(getListFilmSuccess(ress.data));
-        console.log(ress.data);
-        // dispatch(stopLoading());
       })
       .catch(function (err) {
         dispatch(getListFilmFailed(err));
         // console.log(err);
-        // dispatch(stopLoading());
       });
+
   };
 }
 export { getListFilmRequest };
@@ -62,3 +60,11 @@ function resetCinemaSystemByFilm(status) {
   };
 }
 export { resetCinemaSystemByFilm };
+
+function resetCount(data) {
+  return {
+    type: "RESET_LOADING_COUNT",
+    payload: data,
+  }
+}
+export { resetCount };

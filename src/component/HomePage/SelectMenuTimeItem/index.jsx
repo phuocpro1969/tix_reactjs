@@ -6,9 +6,7 @@ import { getCodeShowTime } from "../../../redux/actions/getTimeShowTime";
 function SelectMenuTimeItem(props) {
   let dispatch = useDispatch();
   let { codeShowTime, date } = props.item;
-  console.log(date);
   function handleShowTime() {
-    // console.log(codeShowTime);
     dispatch(getCodeShowTime(codeShowTime));
     dispatch(showTimeOnMenu(format("hh:mm", new Date(date))));
   }

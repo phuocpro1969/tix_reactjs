@@ -12,7 +12,9 @@ function GetListMovieRequest() {
       .then(function (ress) {
         dispatch(GetListMovieSuccess(ress.data));
         // console.log(ress.data);
-        dispatch(stopLoading());
+        setTimeout(() => {
+          dispatch(stopLoading());
+        }, 1000);
       })
       .catch(function (err) {
         dispatch(GetListMovieFailed(err));
